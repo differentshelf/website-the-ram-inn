@@ -1892,52 +1892,6 @@
 		}
 
 		if ( $et_pb_map.length ) {
-			google.maps.event.addDomListener(window, 'load', function() {
-				$et_pb_map.each(function(){
-					var $this_map_container = $(this);
-					var $this_map = $this_map_container.children('.et_pb_map');
-
-						$this_map_container.data('map', new google.maps.Map( $this_map[0], {
-							zoom: parseInt( $this_map.data('zoom') ),
-							center: new google.maps.LatLng( parseFloat( $this_map.data('center-lat') ) , parseFloat( $this_map.data('center-lng') )),
-							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							scrollwheel: $this_map.data('mouse-wheel') == 'on' ? true : false
-						}));
-
-						$this_map_container.data('bounds', new google.maps.LatLngBounds() );
-						$this_map_container.find('.et_pb_map_pin').each(function(){
-							var $this_marker = $(this),
-								position = new google.maps.LatLng( parseFloat( $this_marker.data('lat') ) , parseFloat( $this_marker.data('lng') ) );
-
-							$this_map_container.data('bounds').extend( position );
-
-							var marker = new google.maps.Marker({
-								position: position,
-								map: $this_map_container.data('map'),
-								title: $this_marker.data('title'),
-								icon: { url: et_custom.images_uri + '/marker.png', size: new google.maps.Size( 46, 43 ), anchor: new google.maps.Point( 16, 43 ) },
-								shape: { coord: [1, 1, 46, 43], type: 'rect' },
-								anchorPoint: new google.maps.Point(0, -45)
-							});
-
-							if ( $this_marker.find('.infowindow').length ) {
-								var infowindow = new google.maps.InfoWindow({
-									content: $this_marker.html()
-								});
-
-								google.maps.event.addListener(marker, 'click', function() {
-									infowindow.open( $this_map_container.data('map'), marker );
-								});
-							}
-						});
-
-						setTimeout(function(){
-							if ( !$this_map_container.data('map').getBounds().contains( $this_map_container.data('bounds').getNorthEast() ) || !$this_map_container.data('map').getBounds().contains( $this_map_container.data('bounds').getSouthWest() ) ) {
-								$this_map_container.data('map').fitBounds( $this_map_container.data('bounds') );
-							}
-						}, 200 );
-				});
-			} );
 		}
 
 		if ( $et_pb_circle_counter.length ){
