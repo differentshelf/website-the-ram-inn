@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('menu').innerHTML += '<p class="error-message">Sorry, there was an error loading the menu. Please try again later.</p>';
         });
     
-    // Function to populate a simple menu category
+    // Function to populate a simple menu category - cards only
     function populateMenuCategory(categoryId, categoryData) {
         const categoryElement = document.getElementById(categoryId);
         if (!categoryElement || !categoryData) return;
-        
+    
         // Create a container for items
         const itemsContainer = document.createElement('div');
         itemsContainer.className = 'menu-items-grid';
-        
+    
         // Add items directly without title
         if (categoryData.items && categoryData.items.length > 0) {
             categoryData.items.forEach(item => {
@@ -38,141 +38,87 @@ document.addEventListener('DOMContentLoaded', function() {
                 itemsContainer.appendChild(menuItem);
             });
         }
-        
+    
         categoryElement.appendChild(itemsContainer);
-        
-        // Add note if exists (outside the grid)
-        if (categoryData.note) {
-            const noteElement = document.createElement('p');
-            noteElement.className = 'menu-note';
-            noteElement.textContent = categoryData.note;
-            categoryElement.appendChild(noteElement);
-        }
+    
+        // Remove note section
     }
     
-    // Function to populate the mains category with sections
+    // Function to populate the mains category - cards only, no sections
     function populateMainsCategory(categoryId, categoryData) {
         const categoryElement = document.getElementById(categoryId);
         if (!categoryElement || !categoryData) return;
-        
-        // Add sections directly without main title
+    
+        // Create a container for all items
+        const itemsContainer = document.createElement('div');
+        itemsContainer.className = 'menu-items-grid';
+    
+        // Flatten all items from all sections into a single grid
         if (categoryData.sections && categoryData.sections.length > 0) {
             categoryData.sections.forEach(section => {
-                const sectionElement = document.createElement('div');
-                sectionElement.className = 'menu-section';
-                
-                // Add section title
-                const sectionTitle = document.createElement('h5');
-                sectionTitle.textContent = section.title;
-                sectionTitle.style.gridColumn = '1 / -1';
-                sectionElement.appendChild(sectionTitle);
-                
-                // Add section note if exists
-                if (section.note) {
-                    const noteElement = document.createElement('p');
-                    noteElement.className = 'menu-note';
-                    noteElement.textContent = section.note;
-                    noteElement.style.gridColumn = '1 / -1';
-                    sectionElement.appendChild(noteElement);
-                }
-                
-                // Create a container for items
-                const itemsContainer = document.createElement('div');
-                itemsContainer.className = 'menu-items-grid';
-                itemsContainer.style.gridColumn = '1 / -1';
-                
-                // Add section items
+                // Add section items directly to the main grid
                 if (section.items && section.items.length > 0) {
                     section.items.forEach(item => {
                         const menuItem = createMenuItem(item);
                         itemsContainer.appendChild(menuItem);
                     });
                 }
-                
-                sectionElement.appendChild(itemsContainer);
-                categoryElement.appendChild(sectionElement);
             });
         }
-        
-        // Add allergen info
-        if (categoryData.allergenInfo) {
-            const allergenInfo = document.createElement('div');
-            allergenInfo.className = 'allergen-info';
-            
-            const allergenTitle = document.createElement('h4');
-            allergenTitle.textContent = categoryData.allergenInfo.title;
-            allergenInfo.appendChild(allergenTitle);
-            
-            const allergenLegend = document.createElement('p');
-            allergenLegend.className = 'menu-note';
-            allergenLegend.textContent = categoryData.allergenInfo.legend;
-            allergenInfo.appendChild(allergenLegend);
-            
-            if (categoryData.allergenInfo.warnings && categoryData.allergenInfo.warnings.length > 0) {
-                categoryData.allergenInfo.warnings.forEach(warning => {
-                    const warningElement = document.createElement('p');
-                    warningElement.textContent = warning;
-                    allergenInfo.appendChild(warningElement);
-                });
-            }
-            
-            categoryElement.appendChild(allergenInfo);
-        }
+    
+        categoryElement.appendChild(itemsContainer);
+    
+        // Remove allergen info
     }
     
-    // Function to populate the dessert category
+    // Function to populate the dessert category - cards only
     function populateDessertCategory(categoryId, categoryData) {
         const categoryElement = document.getElementById(categoryId);
         if (!categoryElement || !categoryData) return;
-        
-        // Add main dessert items directly without title
+    
+        // Create a container for all items
+        const itemsContainer = document.createElement('div');
+        itemsContainer.className = 'menu-items-grid';
+    
+        // Add main dessert items
         if (categoryData.items && categoryData.items.length > 0) {
             categoryData.items.forEach(item => {
                 const menuItem = createMenuItem(item);
-                categoryElement.appendChild(menuItem);
+                itemsContainer.appendChild(menuItem);
             });
         }
-        
-        // Add note if exists
-        if (categoryData.note) {
-            const noteElement = document.createElement('p');
-            noteElement.className = 'menu-note';
-            noteElement.textContent = categoryData.note;
-            categoryElement.appendChild(noteElement);
-        }
-        
+    
         // Add extra items
         if (categoryData.extras && categoryData.extras.length > 0) {
             categoryData.extras.forEach(item => {
                 const menuItem = createMenuItem(item);
-                categoryElement.appendChild(menuItem);
+                itemsContainer.appendChild(menuItem);
             });
         }
+    
+        categoryElement.appendChild(itemsContainer);
     }
     
-    // Function to populate the drinks category
+    // Function to populate the drinks category - cards only
     function populateDrinksCategory(categoryId, categoryData) {
         const categoryElement = document.getElementById(categoryId);
         if (!categoryElement || !categoryData) return;
-        
-        // Add sections
+    
+        // Create a container for all items
+        const itemsContainer = document.createElement('div');
+        itemsContainer.className = 'menu-items-grid';
+    
+        // Flatten all items from all sections and subsections
         if (categoryData.sections && categoryData.sections.length > 0) {
             categoryData.sections.forEach(section => {
-                const sectionElement = document.createElement('div');
-                sectionElement.className = 'menu-section';
-                
-                // Skip section title to just show cards
-                
                 // If section has subsections
                 if (section.subsections && section.subsections.length > 0) {
                     section.subsections.forEach(subsection => {
-                        // Skip subsection title to just show cards
-                        
-                        // Add subsection items
+                        // Add subsection items directly to the main grid
                         if (subsection.items && subsection.items.length > 0) {
                             subsection.items.forEach(item => {
                                 const menuItem = createMenuItem(item);
-                                sectionElement.appendChild(menuItem);
+                                itemsContainer.appendChild(menuItem);
                             });
                         }
                     });
@@ -180,13 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Add section items directly if no subsections
                     section.items.forEach(item => {
                         const menuItem = createMenuItem(item);
-                        sectionElement.appendChild(menuItem);
+                        itemsContainer.appendChild(menuItem);
                     });
                 }
-                
-                categoryElement.appendChild(sectionElement);
             });
         }
+    
+        categoryElement.appendChild(itemsContainer);
     }
     
     // Helper function to create a menu item
