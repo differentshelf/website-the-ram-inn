@@ -1313,6 +1313,15 @@ a.facility-item:hover {
     box-shadow: var(--shadow);
 }
 
+/* Address divider in contact section */
+.address-divider {
+    margin: 15px 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    width: 80%;
+}
+
 
 /* Footer */
 footer {
