@@ -630,9 +630,16 @@
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "The Ram Inn",
-      "image": "images/ram-inn-hero.jpg",
+      "alternateName": "The Ram Inn Bussage",
+      "image": [
+        "images/ram-inn-hero.jpg",
+        "images/pub-interior.jpg",
+        "images/gallery-1.jpg"
+      ],
+      "logo": "images/icons/icon-512x512.png",
       "url": "https://www.the-ram-inn.co.uk",
       "telephone": "01453 883163",
+      "email": "info@the-ram-inn.co.uk",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "The Ridge, Old Bussage",
@@ -649,27 +656,64 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "00:00",
+          "closes": "00:00",
+          "validFrom": "2023-01-01",
+          "validThrough": "2025-12-31",
+          "description": "Closed (unless Bank Holiday)"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
           "opens": "12:00",
-          "closes": "15:00"
+          "closes": "15:00",
+          "validFrom": "2023-01-01",
+          "validThrough": "2025-12-31"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
           "opens": "17:00",
-          "closes": "22:00"
+          "closes": "22:00",
+          "validFrom": "2023-01-01",
+          "validThrough": "2025-12-31"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Friday", "Saturday"],
           "opens": "12:00",
-          "closes": "22:00"
+          "closes": "22:00",
+          "validFrom": "2023-01-01",
+          "validThrough": "2025-12-31"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
           "opens": "12:00",
-          "closes": "18:00"
+          "closes": "18:00",
+          "validFrom": "2023-01-01",
+          "validThrough": "2025-12-31"
+        }
+      ],
+      "specialOpeningHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "12:00",
+          "closes": "22:00",
+          "validFrom": "2023-12-25",
+          "validThrough": "2023-12-25",
+          "description": "Christmas Day - Special hours"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "12:00",
+          "closes": "22:00",
+          "validFrom": "2024-01-01",
+          "validThrough": "2024-01-01",
+          "description": "New Year's Day - Bank Holiday opening"
         }
       ],
       "aggregateRating": {
@@ -677,13 +721,265 @@
         "ratingValue": "4.7",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": "120"
+        "ratingCount": "120",
+        "reviewCount": "120"
       },
-      "servesCuisine": ["British", "Pub Food", "Traditional English"],
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Thompson"
+          },
+          "datePublished": "2023-02-15",
+          "reviewBody": "Absolutely wonderful traditional Cotswold pub with amazing views. The food was delicious and locally sourced. John and Mel were fantastic hosts, making us feel so welcome. The perfect stop after our walk through the Toadsmoor Valley.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "David Wilson"
+          },
+          "datePublished": "2023-01-20",
+          "reviewBody": "A hidden gem in the Cotswolds! We stumbled upon The Ram Inn during our weekend trip and were blown away by the quality of the food and the warm atmosphere. The venison sausages were exceptional, and the local ales were perfectly kept. Will definitely be returning.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Emma Parker"
+          },
+          "datePublished": "2023-03-10",
+          "reviewBody": "Lovely traditional pub with a great selection of drinks and tasty home-cooked food. The garden has stunning views over the valley. Dog-friendly too, which was perfect for us. The staff were very attentive and friendly.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          }
+        }
+      ],
+      "servesCuisine": ["British", "Pub Food", "Traditional English", "Cotswold Specialties", "Home-cooked Food"],
+      "menu": "https://www.the-ram-inn.co.uk/#menu",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "The Ram Inn Menu",
+        "description": "Our home-cooked food menu featuring local Cotswold ingredients",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Specials",
+            "description": "Daily changing specials featuring seasonal ingredients",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Venison Sausages",
+                "description": "With Mash and Red Wine Gravy"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Thai Green King Prawn Curry",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Starters",
+            "description": "Appetizers and small plates",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Homemade Soup of the Day",
+                "description": ""
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tempura Prawns with a Chilli Dip",
+                "description": ""
+              }
+            ]
+          }
+        ]
+      },
+      "acceptsReservations": "Yes",
       "priceRange": "££",
-      "paymentAccepted": "Cash, Credit Card",
-      "amenityFeature": ["Free WiFi", "Dog Friendly", "Garden", "Fireplace"],
-      "description": "The Ram Inn is a traditional Cotswold pub in Bussage, Gloucestershire offering home-cooked food, local ales, and a warm welcome in a picturesque setting overlooking Toadsmoor Valley."
+      "paymentAccepted": "Cash, Credit Card, Debit Card",
+      "currenciesAccepted": "GBP",
+      "smokingAllowed": "OutdoorOnly",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Dog Friendly",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Garden",
+          "value": true,
+          "description": "Beautiful garden with views over Toadsmoor Valley"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fireplace",
+          "value": true,
+          "description": "Cozy fireplace for winter months"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Parking",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Outdoor Seating",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Family Friendly",
+          "value": true
+        }
+      ],
+      "publicAccess": true,
+      "isAccessibleForFree": true,
+      "keywords": "Cotswold pub, Bussage restaurant, traditional pub food, local ales, Stroud dining, dog friendly pub, Cotswold walks, Toadsmoor Valley, Gloucestershire pub",
+      "slogan": "Where Friends Meet in the Heart of the Cotswolds",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.7308992,
+          "longitude": -2.1727778
+        },
+        "geoRadius": "10000"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "tel:01453883163",
+          "inLanguage": "en-GB",
+          "actionPlatform": [
+            "http://schema.org/MobileWebPlatform",
+            "http://schema.org/DesktopWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Table reservation"
+        }
+      },
+      "sameAs": [
+        "https://www.facebook.com/pages/The-Ram-Bussage/105116266217471",
+        "https://www.instagram.com/theraminnbussage/",
+        "https://twitter.com/raminnbussage",
+        "https://www.tripadvisor.co.uk/Restaurant_Review-g1216979-d3198255-Reviews-The_Ram_Inn-Chalford_Stroud_Cotswolds_England.html"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "John & Melissa Thwaite",
+        "description": "John and Melissa Thwaite have held the License at the Ram Inn for over 20 years"
+      },
+      "foundingDate": "1811",
+      "description": "The Ram Inn is a traditional Cotswold pub in Bussage, Gloucestershire offering home-cooked food, local ales, and a warm welcome in a picturesque setting overlooking Toadsmoor Valley. Originally a farm with a Cider Room, it was converted to a proper pub in 1811 and has been evolving ever since, maintaining its traditional Cotswold charm.",
+      "disambiguatingDescription": "Historic pub in Old Bussage near Stroud, not to be confused with other Ram Inn locations in the Cotswolds",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "yearEstablished",
+        "value": "1811"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Special Offers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "FoodService",
+              "name": "Sunday Roast",
+              "description": "Traditional Sunday roast with all the trimmings"
+            },
+            "availability": "https://schema.org/Sunday",
+            "price": "14.95",
+            "priceCurrency": "GBP",
+            "validFrom": "2023-01-01",
+            "validThrough": "2025-12-31"
+          }
+        ]
+      },
+      "knowsLanguage": ["en-GB"],
+      "photo": [
+        {
+          "@type": "Photograph",
+          "contentUrl": "images/gallery-1.jpg",
+          "description": "Views of Toadsmoor Valley from The Ram Inn garden"
+        },
+        {
+          "@type": "Photograph",
+          "contentUrl": "images/gallery-2.jpg",
+          "description": "Scenic Cotswold landscape near The Ram Inn"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.the-ram-inn.co.uk/"
+      },
+      "award": "Members of the British Institute of Innkeepers",
+      "isicV4": "5610",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Home-cooked Food",
+          "description": "Traditional pub food made with locally sourced ingredients"
+        },
+        {
+          "@type": "Offer",
+          "name": "Local Ales",
+          "description": "Selection of local and regional ales"
+        },
+        {
+          "@type": "Offer",
+          "name": "Cotswold Walks",
+          "description": "Information on walking routes in the surrounding Cotswold countryside"
+        }
+      ],
+      "maximumAttendeeCapacity": 60,
+      "availableLanguage": "English",
+      "touristType": ["Families", "Couples", "Walkers", "Dog owners"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Tourists and locals",
+        "geographicArea": {
+          "@type": "AdministrativeArea",
+          "name": "Cotswolds"
+        }
+      },
+      "specialty": ["Traditional pub food", "Local ales", "Cotswold hospitality"],
+      "knowsAbout": ["Cotswold walks", "Local history", "Traditional British cuisine"],
+      "diversityPolicy": "We welcome all customers regardless of background",
+      "ethicsPolicy": "We are committed to sustainable and ethical business practices",
+      "healthAndSafetyPolicy": "We maintain the highest standards of food hygiene and safety",
+      "accessibilityControl": "Wheelchair accessible entrance",
+      "accessibilityFeature": ["Accessible toilet", "Accessible parking"],
+      "accessibilityHazard": "Some uneven surfaces in garden area",
+      "accessMode": "Visual",
+      "accessModeSufficient": "Visual",
+      "accessibilitySummary": "The main dining area is accessible for wheelchair users, though some parts of the garden have uneven surfaces."
     }
     </script>
 </body>
