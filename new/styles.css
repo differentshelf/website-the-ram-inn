@@ -354,12 +354,24 @@ section {
 .top-bar-social {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .top-bar-social a {
     color: white;
     font-size: 0.9rem;
-    margin-left: 10px;
+    margin: 0 8px; /* Increase horizontal spacing between icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar-social a:first-child {
+    margin-left: 0;
+}
+
+.top-bar-social a:last-child {
+    margin-right: 0;
 }
 
 .top-bar-social a:hover {
@@ -389,7 +401,15 @@ section {
     
     .top-bar-social a {
         font-size: 0.8rem;
-        margin-left: 8px;
+        margin: 0 6px; /* Slightly less spacing on mobile but still improved */
+    }
+    
+    .top-bar-social a:first-child {
+        margin-left: 0;
+    }
+    
+    .top-bar-social a:last-child {
+        margin-right: 0;
     }
 }
 
