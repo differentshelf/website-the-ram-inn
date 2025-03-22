@@ -425,7 +425,7 @@ section {
     transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(0px); /* Start with no blur */
     -webkit-backdrop-filter: blur(0px);
-    padding: 0;
+    padding: 5px 0; /* Add some padding */
 }
 
 .navbar.scrolled {
@@ -448,7 +448,14 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    height: 70px;
+    height: 80px; /* Increase from 70px to 80px */
+}
+
+/* Logo styling */
+.logo {
+    margin-top: 15px; /* Add margin to move logo down */
+    position: relative;
+    z-index: 10; /* Ensure logo stays above other elements */
 }
 
 /* Logo image styling */
@@ -458,6 +465,7 @@ section {
     display: block;
     margin-bottom: 5px;
     transition: var(--transition);
+    position: relative; /* Add position relative */
 }
 
 .logo .tagline {
@@ -481,8 +489,16 @@ section {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        margin-top: 10px; /* Less margin on mobile */
+    }
+    
     .logo-image {
         height: 40px;
+    }
+    
+    .navbar .container {
+        height: 70px; /* Return to original height on mobile */
     }
 }
 
