@@ -451,13 +451,13 @@ section {
     height: 70px;
 }
 
-.logo h1 {
-    color: var(--secondary-color); /* Gold text for logo */
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+/* Logo image styling */
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
+    margin-bottom: 5px;
     transition: var(--transition);
-    margin-bottom: 0;
 }
 
 .logo .tagline {
@@ -470,12 +470,20 @@ section {
 
 .logo a {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.logo a:hover h1 {
+.logo a:hover .logo-image {
     transform: translateY(-2px);
-    color: var(--secondary-color-light);
+    filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px;
+    }
 }
 
 @media (min-width: 992px) {

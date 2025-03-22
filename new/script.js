@@ -372,11 +372,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Highlight logo when home section is active
-        const logo = document.querySelector('.logo h1');
-        if (current === 'home' && logo) {
-            logo.style.color = 'var(--secondary-color-light)';
-        } else if (logo) {
-            logo.style.color = 'var(--secondary-color)';
+        const logoImage = document.querySelector('.logo-image');
+        if (current === 'home' && logoImage) {
+            logoImage.style.filter = 'brightness(1.2)';
+        } else if (logoImage) {
+            logoImage.style.filter = 'brightness(1)';
         }
     });
     
