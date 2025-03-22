@@ -360,7 +360,7 @@ section {
 .top-bar-social a {
     color: white;
     font-size: 0.9rem;
-    margin: 0 8px; /* Increase horizontal spacing between icons */
+    margin: 0 12px; /* Increase from 8px to 12px for more horizontal spacing */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -401,7 +401,7 @@ section {
     
     .top-bar-social a {
         font-size: 0.8rem;
-        margin: 0 6px; /* Slightly less spacing on mobile but still improved */
+        margin: 0 10px; /* Increase from 6px to 10px on mobile */
     }
     
     .top-bar-social a:first-child {
