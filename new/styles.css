@@ -400,17 +400,20 @@ section {
     left: 0;
     width: 100%;
     z-index: var(--z-index-sticky);
-    background-color: rgba(84, 39, 43, 0.9); /* Burgundy with transparency */
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(84, 39, 43, 0); /* Start with fully transparent */
+    box-shadow: none; /* Remove shadow initially */
+    transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(0px); /* Start with no blur */
+    -webkit-backdrop-filter: blur(0px);
     padding: 0;
 }
 
 .navbar.scrolled {
     padding: 10px 0;
     background-color: rgba(84, 39, 43, 0.98); /* More solid burgundy when scrolled */
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
 .navbar .container {
@@ -425,7 +428,7 @@ section {
     color: var(--secondary-color); /* Gold text for logo */
     font-size: 1.8rem;
     font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transition: var(--transition);
     margin-bottom: 0;
 }
@@ -435,6 +438,7 @@ section {
     color: white;
     display: block;
     margin-top: -5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .logo a {
@@ -478,6 +482,7 @@ section {
     height: 100%;
     display: flex;
     align-items: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add text shadow */
 }
 
 .nav-link::after {

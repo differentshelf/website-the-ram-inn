@@ -394,6 +394,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Make sure navbar starts transparent
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY <= 50) {
+        navbar.classList.remove('scrolled');
+    } else {
+        navbar.classList.add('scrolled');
+    }
+    
     // Active navigation link based on scroll position
     const sections = document.querySelectorAll('section');
     const menuNavLinks = document.querySelectorAll('.nav-link');
