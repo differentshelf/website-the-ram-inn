@@ -1,0 +1,278 @@
+{
+  "specials": {
+    "title": "Sample Specials",
+    "items": [
+      {
+        "name": "Spicy Beef Cassrsole",
+        "description": ""
+      },
+      {
+        "name": "Butternut Squash and Lentil Dhansak",
+        "description": "With Rice and Poppadums"
+      },
+      {
+        "name": "Tomato, Mozzarella and Aubergine Bake",
+        "description": ""
+      },
+      {
+        "name": "Venison Sausages",
+        "description": "With Mash and Red Wine Gravy"
+      },
+      {
+        "name": "Home Cooked Ham with Egg and Chips",
+        "description": ""
+      },
+      {
+        "name": "Thai Green King Prawn Curry",
+        "description": ""
+      },
+      {
+        "name": "8oz Sirloin Steak",
+        "description": ""
+      }
+    ],
+    "note": "It is always worth asking if your favourites are not on the specials board, Mel can often accomodate."
+  },
+  "starters": {
+    "title": "Starters",
+    "items": [
+      {
+        "name": "Antipasti Olive Mix",
+        "description": ""
+      },
+      {
+        "name": "Crust Bread with Oils & Balsamic Vinegar",
+        "description": ""
+      },
+      {
+        "name": "Homemade Soup of the Day",
+        "description": ""
+      },
+      {
+        "name": "Tempura Prawns with a Chilli Dip",
+        "description": ""
+      },
+      {
+        "name": "Crispy Chicken Strips with Chilli Sauce",
+        "description": ""
+      },
+      {
+        "name": "Whitebait with Tartar Sauce",
+        "description": ""
+      },
+      {
+        "name": "Salt & Pepper Squid with Garlic Mayo",
+        "description": ""
+      }
+    ]
+  },
+  "mains": {
+    "title": "Mains",
+    "sections": [
+      {
+        "title": "Curries",
+        "note": "(All served with Rice & Popadoms/Crackers & Pickles)",
+        "items": [
+          {
+            "name": "Chicken or Prawn Madras",
+            "description": "",
+            "dietary": "NG"
+          },
+          {
+            "name": "Chicken or Prawn Korma",
+            "description": "",
+            "dietary": "NG"
+          },
+          {
+            "name": "Vegetarian options available please ask",
+            "description": "",
+            "dietary": "NG VEO"
+          }
+        ]
+      },
+      {
+        "title": "Burgers",
+        "items": [
+          {
+            "name": "Jessie's 8oz Beef Burger with Cheese",
+            "description": "With Garnish, Relish & Chips"
+          },
+          {
+            "name": "Chicken Burger",
+            "description": "With Lettuce, Mayonnaise, Tomato, Garnish & Chips",
+            "dietary": "NGO"
+          },
+          {
+            "name": "Oriental Spiced Veggie Burger",
+            "description": "With Relish, Garnish & Chips",
+            "dietary": "V"
+          }
+        ]
+      },
+      {
+        "title": "Favourites",
+        "items": [
+          {
+            "name": "Mince Beef with Rice and Sides",
+            "description": ""
+          },
+          {
+            "name": "Vegetarian Risotto with Side Salad",
+            "description": "",
+            "dietary": "V VEO"
+          },
+          {
+            "name": "Jessie's Pie of the Day",
+            "description": "(subject to availability)"
+          },
+          {
+            "name": "Bistro Battered Cod, Chips and Peas",
+            "description": ""
+          },
+          {
+            "name": "Wholetail Scampi with Chips & Peas",
+            "description": ""
+          },
+          {
+            "name": "Katsu Chicken Curry with Rice and Crackers",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "title": "Sides",
+        "items": [
+          {
+            "name": "Onion Rings",
+            "description": ""
+          },
+          {
+            "name": "Chips large / small",
+            "description": "",
+            "dietary": "NGO"
+          },
+          {
+            "name": "Salad / Vegetable Portion",
+            "description": ""
+          },
+          {
+            "name": "Garlic Ciabatta / add Cheese / add Truffle Oil and Parmesan",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "allergenInfo": {
+      "title": "Allergen Information",
+      "legend": "V=vegetarian VE=vegan VEO=vegan option available NG=non gluten ingredients used NGO=non gluten option DF=dairy free DFO=dairy free option",
+      "warnings": [
+        "Our kitchen handles the following allergens: Cereals containing gluten, Crustaceans, Eggs, Fish, Peanuts, Soybeans, Milk, Nuts, Celery, Mustard, Sesame seeds, Sulphur dioxide and sulphites, Lupin, and Molluscs.",
+        "If you have any food allergies or intolerances, please speak to our staff before ordering. Full allergen information is available upon request."
+      ]
+    }
+  },
+  "desserts": {
+    "title": "Desserts",
+    "items": [
+      {
+        "name": "Chocolate Fudge Cake",
+        "description": ""
+      },
+      {
+        "name": "Meringue Roulade",
+        "description": "",
+        "dietary": "NG"
+      },
+      {
+        "name": "Bread & Butter Pudding",
+        "description": "",
+        "dietary": "NGO DFOM"
+      },
+      {
+        "name": "Belgian Waffle, Ice Cream & Chocolate Sauce",
+        "description": ""
+      }
+    ],
+    "note": "All served with Cream, Custard or Ice Cream",
+    "extras": [
+      {
+        "name": "Affogato",
+        "description": ""
+      },
+      {
+        "name": "Ice cream (Winstones, please ask for flavours)",
+        "description": "",
+        "dietary": "DFO"
+      },
+      {
+        "name": "Dessert Wine (2017 Monbazillac)",
+        "description": ""
+      },
+      {
+        "name": "Cheese Board",
+        "description": ""
+      },
+      {
+        "name": "Port (Krohn LBV 2015)",
+        "description": ""
+      }
+    ]
+  },
+  "drinks": {
+    "sections": [
+      {
+        "title": "Beers",
+        "items": [
+          { "name": "Butcombe Original" },
+          { "name": "Butcombe Rare Breed" },
+          { "name": "Timothy Taylor's Landlord" },
+          { "name": "Thatchers Gold Cider" },
+          { "name": "Dunkertons Craft Cider" },
+          { "name": "Bierra Moretti" },
+          { "name": "Amstel" },
+          { "name": "Guinness" }
+        ]
+      },
+      {
+        "title": "Wine List",
+        "subsections": [
+          {
+            "title": "White Wines",
+            "items": [
+              { "name": "Castillo Ladera Airen Sauvigon Blanc, Spain" },
+              { "name": "Norte Chico Chardonnay, Chile" },
+              { "name": "Allamanda Pinot Grigio, Italy" },
+              { "name": "False Bay Chenin Blanc, South Africa" },
+              { "name": "Siglos Verdejo, Spain" },
+              { "name": "Duc Morny Picpoul de Pinet, Languedoc, France" },
+              { "name": "Villa Blance Viognier, France" },
+              { "name": "Gavi 'La Battistina', Italy" },
+              { "name": "Makutu Sauvugnon Blanc, Marlborough, New Zealand" }
+            ]
+          },
+          {
+            "title": "Red Wines",
+            "items": [
+              { "name": "Castillo Ladera Tempranillo Syrah, Spain" },
+              { "name": "Norte Chico Merlot, Chile" },
+              { "name": "Domaine Bergon Cabernet Sauvignon, France" },
+              { "name": "Miopasso Primitivo, Italy" },
+              { "name": "Wishbone Shiraz Grenache, Australia" },
+              { "name": "Santa Macarena Pinot Noir, Chile" },
+              { "name": "Nieto Malbec Reserva, Argentina" },
+              { "name": "Painted Wolf The Den Pinotage, South Africa" },
+              { "name": "Cotes du Rhone Domaine des Pasquiers, France" }
+            ]
+          },
+          {
+            "title": "Rose Wines",
+            "items": [
+              { "name": "Allamanda Pinot Grigio Rose, Italy" },
+              { "name": "Silver Myn Cabernet France Rose, South Africa" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
