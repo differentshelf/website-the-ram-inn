@@ -858,6 +858,9 @@ section {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid transparent;
+    height: 100%; /* Ensure all cards have the same height */
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-item:hover {
@@ -869,7 +872,7 @@ section {
 .menu-item-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Change from center to flex-start */
     margin-bottom: 10px;
     border-bottom: 1px dashed var(--border-color);
     padding-bottom: 10px;
@@ -877,6 +880,9 @@ section {
 
 .menu-section {
     margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .menu-section h5 {
@@ -891,6 +897,18 @@ section {
     font-style: italic;
     margin: 15px 0;
     color: #666;
+    grid-column: 1 / -1; /* Make notes span all columns */
+}
+
+.menu-item-description {
+    flex-grow: 1; /* Allow description to fill available space */
+}
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
 .allergen-info {

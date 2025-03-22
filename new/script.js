@@ -27,15 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const categoryElement = document.getElementById(categoryId);
         if (!categoryElement || !categoryData) return;
         
+        // Create a container for items
+        const itemsContainer = document.createElement('div');
+        itemsContainer.className = 'menu-items-grid';
+        
         // Add items directly without title
         if (categoryData.items && categoryData.items.length > 0) {
             categoryData.items.forEach(item => {
                 const menuItem = createMenuItem(item);
-                categoryElement.appendChild(menuItem);
+                itemsContainer.appendChild(menuItem);
             });
         }
         
-        // Add note if exists
+        categoryElement.appendChild(itemsContainer);
+        
+        // Add note if exists (outside the grid)
         if (categoryData.note) {
             const noteElement = document.createElement('p');
             noteElement.className = 'menu-note';
@@ -55,24 +61,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sectionElement = document.createElement('div');
                 sectionElement.className = 'menu-section';
                 
-                // Skip section title to just show cards
+                // Add section title
+                const sectionTitle = document.createElement('h5');
+                sectionTitle.textContent = section.title;
+                sectionTitle.style.gridColumn = '1 / -1';
+                sectionElement.appendChild(sectionTitle);
                 
                 // Add section note if exists
                 if (section.note) {
                     const noteElement = document.createElement('p');
                     noteElement.className = 'menu-note';
                     noteElement.textContent = section.note;
+                    noteElement.style.gridColumn = '1 / -1';
                     sectionElement.appendChild(noteElement);
                 }
+                
+                // Create a container for items
+                const itemsContainer = document.createElement('div');
+                itemsContainer.className = 'menu-items-grid';
+                itemsContainer.style.gridColumn = '1 / -1';
                 
                 // Add section items
                 if (section.items && section.items.length > 0) {
                     section.items.forEach(item => {
                         const menuItem = createMenuItem(item);
-                        sectionElement.appendChild(menuItem);
+                        itemsContainer.appendChild(menuItem);
                     });
                 }
                 
+                sectionElement.appendChild(itemsContainer);
                 categoryElement.appendChild(sectionElement);
             });
         }
@@ -184,12 +201,29 @@ document.addEventListener('DOMContentLoaded', function() {
         itemName.textContent = item.name;
         menuItemHeader.appendChild(itemName);
         
+        // Add price if exists (right-aligned)
+        if (item.price) {
+            const priceSpan = document.createElement('span');
+            priceSpan.className = 'price';
+            priceSpan.textContent = item.price;
+            menuItemHeader.appendChild(priceSpan);
+        }
+        
         // Add dietary info if exists
         if (item.dietary) {
             const dietarySpan = document.createElement('span');
             dietarySpan.className = 'dietary';
             dietarySpan.textContent = item.dietary;
-            menuItemHeader.appendChild(dietarySpan);
+            
+            // If there's no price, append to header, otherwise create a separate line
+            if (!item.price) {
+                menuItemHeader.appendChild(dietarySpan);
+            } else {
+                const dietaryContainer = document.createElement('div');
+                dietaryContainer.className = 'dietary-container';
+                dietaryContainer.appendChild(dietarySpan);
+                menuItem.appendChild(dietaryContainer);
+            }
         }
         
         menuItem.appendChild(menuItemHeader);
@@ -197,8 +231,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add description if exists
         if (item.description && item.description.trim() !== '') {
             const description = document.createElement('p');
+            description.className = 'menu-item-description';
             description.textContent = item.description;
             menuItem.appendChild(description);
+        } else {
+            // Add an empty description to maintain consistent height
+            const emptyDescription = document.createElement('p');
+            emptyDescription.className = 'menu-item-description';
+            emptyDescription.innerHTML = '&nbsp;';
+            menuItem.appendChild(emptyDescription);
         }
         
         return menuItem;
