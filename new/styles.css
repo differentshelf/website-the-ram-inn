@@ -1,15 +1,15 @@
 /* Base Styles */
 :root {
     /* Colors */
-    --primary-color: #54272b; /* Burgundy */
-    --primary-color-light: #6d3339; /* Lighter burgundy */
-    --primary-color-dark: #3e1d20; /* Darker burgundy */
+    --primary-color: #2c5234; /* Dark green instead of burgundy */
+    --primary-color-light: #3a6a45; /* Lighter green */
+    --primary-color-dark: #1e3a24; /* Darker green */
     --secondary-color: #d4af37; /* Brighter gold */
     --secondary-color-light: #f4cf4f; /* Lighter gold */
     --secondary-color-dark: #c5a028; /* Darker gold */
-    --accent-color: #54272b; /* Burgundy as accent */
-    --accent-color-light: #6d3339; /* Lighter burgundy */
-    --accent-color-dark: #3e1d20; /* Darker burgundy */
+    --accent-color: #2c5234; /* Green as accent */
+    --accent-color-light: #3a6a45; /* Lighter green */
+    --accent-color-dark: #1e3a24; /* Darker green */
     
     /* Text colors */
     --text-color: #333;
@@ -430,7 +430,7 @@ section {
 
 .navbar.scrolled {
     padding: 10px 0;
-    background-color: rgba(84, 39, 43, 0.98); /* More solid burgundy when scrolled */
+    background-color: rgba(44, 82, 52, 0.98); /* More solid green when scrolled */
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
@@ -736,7 +736,7 @@ section {
     font-size: 2.5rem;
     color: var(--secondary-color); /* Gold icons */
     margin-bottom: 20px;
-    background: rgba(84, 39, 43, 0.1); /* Burgundy background with low opacity */
+    background: rgba(44, 82, 52, 0.1); /* Green background with low opacity */
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -835,7 +835,7 @@ a.facility-item:hover {
 }
 
 .opening-hours tr:hover {
-    background-color: rgba(84, 39, 43, 0.05);
+    background-color: rgba(44, 82, 52, 0.05);
 }
 
 /* About Section */
