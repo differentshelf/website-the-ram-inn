@@ -580,7 +580,7 @@ section {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color); /* Gold text on hover */
+    color: var(--secondary-color-light); /* Lighter gold for better contrast on dark navbar */
 }
 
 .nav-link:hover::after {
@@ -588,7 +588,7 @@ section {
 }
 
 .nav-link.active {
-    color: var(--secondary-color);
+    color: var(--secondary-color-light);
 }
 
 .nav-link.active::after {
