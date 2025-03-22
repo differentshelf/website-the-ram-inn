@@ -730,6 +730,35 @@ section {
     color: var(--primary-color); /* Burgundy headings */
 }
 
+/* Make TripAdvisor card appear clickable */
+a.facility-item {
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+a.facility-item::after {
+    content: '\f35d'; /* External link icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a.facility-item:hover::after {
+    opacity: 1;
+}
+
+a.facility-item:hover {
+    border-color: var(--secondary-color);
+}
+
 /* Opening Times Section */
 .openingtimes {
     background-color: #f9f9f9;
