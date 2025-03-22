@@ -1,0 +1,51 @@
+{
+  "name": "The Ram Inn Bussage",
+  "short_name": "Ram Inn",
+  "description": "Traditional Cotswold pub in Bussage, Gloucestershire offering home-cooked food, local ales, and a warm welcome.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#54272b",
+  "theme_color": "#54272b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "View our food and drink menu",
+      "url": "/#menu",
+      "icons": [{ "src": "images/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Find our location and contact details",
+      "url": "/#contact",
+      "icons": [{ "src": "images/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["food", "restaurants", "pub", "cotswolds", "tourism"],
+  "screenshots": [
+    {
+      "src": "images/ram-inn-hero.jpg",
+      "type": "image/jpeg",
+      "sizes": "1920x1080",
+      "form_factor": "wide"
+    }
+  ],
+  "lang": "en-GB",
+  "dir": "ltr"
+}
