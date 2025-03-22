@@ -775,6 +775,16 @@ section {
     color: var(--primary-color); /* Burgundy text */
 }
 
+.opening-hours td:last-child {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+.opening-hours tr:hover {
+    background-color: rgba(84, 39, 43, 0.05);
+}
+
 /* About Section */
 .about-content {
     display: flex;
