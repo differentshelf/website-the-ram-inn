@@ -416,6 +416,13 @@ section {
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
+/* Remove text shadow when navbar is scrolled */
+.navbar.scrolled .logo h1,
+.navbar.scrolled .logo .tagline,
+.navbar.scrolled .nav-link {
+    text-shadow: none;
+}
+
 .navbar .container {
     display: flex;
     justify-content: space-between;
